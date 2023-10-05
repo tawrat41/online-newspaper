@@ -1,14 +1,17 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import { Button, ListGroup } from "react-bootstrap";
-import { FaGoogle, FaGithub, FaFacebook, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import { FaGoogle, FaGithub, FaFacebook, FaLinkedinIn, FaInstagram, FaEnvelope } from "react-icons/fa";
 import Qzone from "../pages/Qzone/Qzone";
 
 const RightNav = () => {
   return (
     <div>
-      <h3 className="text-center my-2">Login with</h3>
-      <Button className="my-2" variant="outline-secondary">
+      {/* <h3 className="text-center my-2">Login with</h3> */}
+      <Button variant="outline-primary" className="">
+      <FaEnvelope/>  Login with email
+      </Button>
+      <Button className="my-2" variant="outline-danger">
         <FaGoogle /> Login with Google
       </Button>
       <br />
