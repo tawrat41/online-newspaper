@@ -7,12 +7,14 @@ import RightNav from "./RightNav";
 import LeftNav from "./leftNav";
 import Category from "../pages/Home/category";
 import { Outlet } from "react-router-dom";
+import NavigationBar from "../pages/shared/Header/NavigationBar/NavigationBar";
 // import LeftNav from './LeftNav';
 
 const Main = () => {
   return (
     <div>
       <Header></Header>
+      <NavigationBar></NavigationBar>
       <Container>
         <Row>
           <Col lg={3}><LeftNav></LeftNav></Col>
