@@ -19,7 +19,7 @@ const NavigationBar = () => {
               navbarScroll
             >
               <Nav.Link className="mx-3" href="">
-                <Link to="/">Home</Link>
+                <Link to="/category/0">Home</Link>
               </Nav.Link>
               <Nav.Link className="mx-3" href="#action2">
                 About
@@ -39,7 +39,7 @@ const NavigationBar = () => {
               {user ? (
                 <Button className="btn btn-secondary">Logout</Button>
               ) : (
-                <Link to="/">Login</Link>
+                <Link to="/login"><Button className="btn btn-secondary">Login</Button></Link>
               )}
             </Nav>
           </Navbar.Collapse>

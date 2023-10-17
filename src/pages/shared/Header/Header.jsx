@@ -11,7 +11,6 @@ import { FaUser, FaUserCircle } from "react-icons/fa";
 
 const Header = () => {
 
-  
 
   return (
     <Container>
