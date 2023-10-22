@@ -4,10 +4,12 @@ import { Link } from "react-router-dom";
 import './logister.css';
 import Header from "../shared/Header/Header";
 import { AuthContext } from "../../providers/AuthProviders";
+import { useState } from "react";
 
 const Register = () => {
 
   const {createUSer} = useContext(AuthContext);
+  const [accepted, setAccepted] = useState(false)
 
   const handleRegister = event =>{
     event.preventDefault();
@@ -30,6 +32,12 @@ const Register = () => {
       console.log(error);
     })
   }
+
+  const handleAccepted = event => {
+    setAccepted(event.target.checked);
+  }
+
+
 
   return (
     <>
@@ -56,9 +64,9 @@ const Register = () => {
           <Form.Control type="password" placeholder="Password" name='password'/>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicCheckbox" id="tnc">
-          <Form.Check type="checkbox" label="Accept terms & conditions"  />
+          <Form.Check name="accept"  onClick={handleAccepted}  type="checkbox" label={<>Accept <Link to='/terms'>Terms & Condition</Link></>}  />
         </Form.Group>
-        <Button className="btn btn-secondary w-100 mt-4" variant="primary" type="submit">
+        <Button className="btn btn-secondary w-100 mt-4" variant="primary" type="submit" disabled={!accepted}>
           Register
         </Button>
         <Form className="text mt-2">
